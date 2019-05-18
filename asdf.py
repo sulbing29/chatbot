@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -20,8 +21,11 @@ async def on_message(message):
          await message.channel.send("ㅎㅇ")
     if message.content.startswith("/채팅봇 제작자"):
          await message.channel.send("위대한 설빙 Snow ice 입니다")
-
-client.run("NTc5MTg1ODQ0OTg5MTk4MzQ2.XN--zg.YkBcDx7xJxn3EcoAZKRTemjCle4")
+            
+         
+        
+access_token = os.inviron["BOT_TOKEN"]
+client.run(access_token)
 
 
 
